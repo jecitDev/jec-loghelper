@@ -31,11 +31,11 @@ func initHelper(ctx context.Context) {
 		log.Printf("Cannot connect to new relic zap:%v\n", err)
 	}
 
-	appLogger := zap.New(backgroundCore, zap.AddCaller(), zap.AddCallerSkip(1), zap.AddStacktrace(zapcore.ErrorLevel))
+	logger := zap.New(backgroundCore, zap.AddCaller(), zap.AddCallerSkip(1), zap.AddStacktrace(zapcore.ErrorLevel))
 
 	// logger := zap.New(ecszap.WrapCore(core), zap.AddCaller(), zap.AddCallerSkip(1), zap.AddStacktrace(zapcore.ErrorLevel))
 
-	// appLogger = logger.Sugar()
+	appLogger = logger.Sugar()
 	defer appLogger.Sync()
 }
 

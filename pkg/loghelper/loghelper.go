@@ -131,8 +131,8 @@ func Fatalf(ctx context.Context, template string, args ...interface{}) {
 }
 func setKeyLogger(ctx context.Context, log *zap.SugaredLogger) *zap.SugaredLogger {
 	return log
-	// initHelper(ctx)
-	// xTraceID := ctx.Value(XTRACEID).(string)
+	//// initHelper(ctx)
+	//// xTraceID := ctx.Value(XTRACEID).(string)
 	// xName := "log" + xTraceID
 	// if ctx.Value(XAPPNAME) != nil {
 	// 	xName = ctx.Value(XAPPNAME).(string)
